@@ -1,0 +1,413 @@
+[
+  {
+    "id": 1,
+    "name": "Master Crok",
+    "group": "master",
+    "stats": {
+      "erő": 8,
+      "intelligencia": 7,
+      "reflex": 9
+    },
+    "ability": {
+      "name": "Váratlan csapás",
+      "text": "Kicserélheted egy másik, a kezedben levő Crokra, ha az nem Master Crok.",
+      "code": "swap_with_hand",
+      "type": "active"
+    },
+    "bot_hint": [
+      "swap_to_save_master",
+      "swap_if_win_with_weaker",
+      "prefer_play_early",
+      "swap_to_weakest_by_id"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bond Crok",
+    "group": "🔫 pistol",
+    "stats": {
+      "erő": 5,
+      "intelligencia": 6,
+      "reflex": 7
+    },
+    "ability": {
+      "name": "Trükkös fordulat",
+      "text": "Megváltoztathatod a harc típusát: erő, intelligencia vagy reflex.",
+      "code": "change_fight_type",
+      "type": "active"
+    },
+    "bot_hint": [
+      "change_type_for_win_or_tie"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Devil Crok",
+    "group": "🔥 hell",
+    "stats": {
+      "erő": 6,
+      "intelligencia": 6,
+      "reflex": 6
+    },
+    "ability": {
+      "name": "Lélekrablás",
+      "text": "Használhatja egy másik játékos, egyik vesztes Crokjának képességét.",
+      "code": "copy_lost_ability",
+      "type": "active"
+    },
+    "bot_hint": [
+      "copy_best_win_ability",
+      "prefer_buff"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Samurai Crok",
+    "group": "\u262F\uFE0F yinyang",
+    "stats": {
+      "erő": 6,
+      "intelligencia": 4,
+      "reflex": 8
+    },
+    "ability": {
+      "name": "Első vágás",
+      "text": "Azonnal hatástalanítja az ellenfelek képességeit.",
+      "code": "disable_opponent_ability",
+      "type": "immediate"
+    },
+    "bot_hint": [
+      "prefer_reflex"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Angel Crok",
+    "group": "👼 holy",
+    "stats": {
+      "erő": 3,
+      "intelligencia": 4,
+      "reflex": 7
+    },
+    "ability": {
+      "name": "Feltámasztás",
+      "text": "Visszaveheted a kezedbe egy vesztes Crokodat.",
+      "code": "revive_from_lost",
+      "type": "active"
+    },
+    "bot_hint": [
+      "revive_strongest_lost"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Captain Crok",
+    "group": "🧭 adventurer",
+    "stats": {
+      "erő": 5,
+      "intelligencia": 6,
+      "reflex": 3
+    },
+    "ability": {
+      "name": "Nagy ütközet",
+      "text": "Ütközetet indíthatsz: mindenki kiteszi paklijának legfelső Crokját, aki csatlakozik a harcolókhoz. Az értékek összege számít.",
+      "code": "battle_royale",
+      "type": "active"
+    },
+    "bot_hint": [
+      "battle_royale_often"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Executor Crok",
+    "group": "🔥 hell",
+    "stats": {
+      "erő": 7,
+      "intelligencia": 4,
+      "reflex": 3
+    },
+    "ability": {
+      "name": "Nincs kegyelem",
+      "text": "A kiszemelt másik játékos választ és lerak egy lapot a vesztes Crokjaihoz.",
+      "code": "force_discard_to_lost",
+      "type": "active"
+    },
+    "bot_hint": [
+      "target_leader"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Jungle Crok",
+    "group": "🔪 soldier",
+    "stats": {
+      "erő": 6,
+      "intelligencia": 3,
+      "reflex": 5
+    },
+    "ability": {
+      "name": "Dzsungelharc",
+      "text": "Kicserélheted a paklid legfelső Crokjára, anélkül, hogy megnéznéd, hogy melyik az a lap.",
+      "code": "swap_with_deck_blind",
+      "type": "active"
+    },
+    "bot_hint": [
+      "swap_if_can_win",
+      "skip_if_opponent_high"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Sensei Crok",
+    "group": "\u262F\uFE0F yinyang",
+    "stats": {
+      "erő": 2,
+      "intelligencia": 9,
+      "reflex": 3
+    },
+    "ability": {
+      "name": "Tanítás ereje",
+      "text": "A következő harcban Crokjaid minden értéke eggyel megnő.",
+      "code": "buff_next_turn_all_1",
+      "type": "passive"
+    },
+    "bot_hint": [
+      "prefer_intelligence"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Sumo Crok",
+    "group": "🏆 martial",
+    "stats": {
+      "erő": 8,
+      "intelligencia": 5,
+      "reflex": 1
+    },
+    "ability": {
+      "name": "Lehengerlés",
+      "text": "Kettővel nő az ereje, ha intelligensebb, mint az ellenfelei.",
+      "code": "buff_power_if_more_intelligent",
+      "type": "passive"
+    },
+    "bot_hint": [
+      "prefer_power"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Pancrator Crok",
+    "group": "⚡ lightning",
+    "stats": {
+      "erő": 9,
+      "intelligencia": 2,
+      "reflex": 3
+    },
+    "ability": {
+      "name": "Tömegverekedés",
+      "text": "Ha veszít, akkor a következő harc vakharccal indul, te választod meg a típusát.",
+      "code": "blind_fight_on_loss",
+      "type": "passive"
+    },
+    "bot_hint": [
+      "prefer_power"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Army Crok",
+    "group": "🔪 soldier",
+    "stats": {
+      "erő": 3,
+      "intelligencia": 4,
+      "reflex": 4
+    },
+    "ability": {
+      "name": "Sorozatlövés",
+      "text": "Az értékei annyival megnőnek, ahány ellenfele van. A kicserélt Crokok is újabb ellenfélnek számítanak.",
+      "code": "buff_per_opponent",
+      "type": "passive"
+    },
+    "bot_hint": [
+      "prefer_many_players",
+      "prefer_last_defender"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Boy Crok",
+    "group": "🌼 jolly",
+    "stats": {
+      "erő": 1,
+      "intelligencia": 4,
+      "reflex": 6
+    },
+    "ability": {
+      "name": "Pimasz csínytevés",
+      "text": "A következő körben te támadsz. Védekezéskor +2 reflex.",
+      "code": "force_attack_next_turn_def_buff",
+      "type": "passive"
+    },
+    "bot_hint": [
+      "prefer_defense_reflex"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Cave Crok",
+    "group": "⚡ lightning",
+    "stats": {
+      "erő": 7,
+      "intelligencia": 1,
+      "reflex": 3
+    },
+    "ability": {
+      "name": "Dühöngés",
+      "text": "Annyival megnőnek az értékei, amennyivel kevesebb a nyertes lapod, mint a kiválasztott ellenfelednek.",
+      "code": "catchup_bonus",
+      "type": "passive"
+    },
+    "bot_hint": [
+      "prefer_power_if_catchup_2plus"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Funny Crok",
+    "group": "🌼 jolly",
+    "stats": {
+      "erő": 1,
+      "intelligencia": 6,
+      "reflex": 4
+    },
+    "ability": {
+      "name": "Van másik!",
+      "text": "Egy másik játékos Crokját kicseréltetheted paklijának legalsó lapjára.",
+      "code": "force_swap_opponent_bottom",
+      "type": "active"
+    },
+    "bot_hint": [
+      "prefer_intelligence",
+      "swap_to_weaken_opponent",
+      "swap_if_can_win"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Gladiator Crok",
+    "group": "🧭 adventurer",
+    "stats": {
+      "erő": 5,
+      "intelligencia": 1,
+      "reflex": 5
+    },
+    "ability": {
+      "name": "Pajzsharc",
+      "text": "A harc típusát erőre változtathatod.",
+      "code": "force_power_fight",
+      "type": "active"
+    },
+    "bot_hint": [
+      "switch_to_power_for_win_or_tie"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Indian Crok",
+    "group": "⭐ western",
+    "stats": {
+      "erő": 3,
+      "intelligencia": 5,
+      "reflex": 3
+    },
+    "ability": {
+      "name": "Felderítés",
+      "text": "Átnézheted a paklid felső 6 Crokját és megváltoztathatod a sorrendjüket.",
+      "code": "scry_6",
+      "type": "active"
+    },
+    "bot_hint": [
+      "scry_sort_by_strength"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Karate Crok",
+    "group": "🏆 martial",
+    "stats": {
+      "erő": 2,
+      "intelligencia": 3,
+      "reflex": 6
+    },
+    "ability": {
+      "name": "Tigriskarom",
+      "text": "Ha a vesztesek közé raksz egy Crokot a kezedből, akkor annak erejét használhatod a harcban.",
+      "code": "sacrifice_for_power",
+      "type": "active"
+    },
+    "bot_hint": [
+      "sacrifice_only_if_win",
+      "prefer_reflex_no_sac",
+      "avoid_strong_sacrifice"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Police Crok",
+    "group": "🔫 pistol",
+    "stats": {
+      "erő": 4,
+      "intelligencia": 3,
+      "reflex": 4
+    },
+    "ability": {
+      "name": "Letartóztatás",
+      "text": "Nyer, ha a vesztesek közé dobod a kezedből bármelyik másik játékos Crokjának mását.",
+      "code": "win_by_discarding_duplicate",
+      "type": "active"
+    },
+    "bot_hint": [
+      "use_if_weak_hand",
+      "sacrifice_low_value"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Priest Crok",
+    "group": "👼 holy",
+    "stats": {
+      "erő": 2,
+      "intelligencia": 7,
+      "reflex": 2
+    },
+    "ability": {
+      "name": "Ima",
+      "text": "Azonnal hatástalanítja a 🔥 Crokok képességeit, vagy húzhatsz egy lapot.",
+      "code": "disable_underworld_or_draw",
+      "type": "immediate"
+    },
+    "bot_hint": [
+      "prefer_intelligence",
+      "disable_hell_or_draw"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Sheriff Crok",
+    "group": "⭐ western",
+    "stats": {
+      "erő": 3,
+      "intelligencia": 3,
+      "reflex": 5
+    },
+    "ability": {
+      "name": "Pisztolypárbaj",
+      "text": "Nyer, ha az aktuális eredmény döntetlen.",
+      "code": "win_on_draw",
+      "type": "passive"
+    },
+    "bot_hint": [
+      "prefer_reflex_or_last"
+    ]
+  }
+]
